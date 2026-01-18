@@ -14,6 +14,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/navbar";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../api/config";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ const Home = () => {
 
   const fetchOccasionProducts = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/occasion-products");
+      const response = await fetch(`${API_URL}/api/occasion-products`);
       const data = await response.json();
       
       // Filter to get one product from each occasion: Birthday, Anniversary, Valentine's Day
@@ -49,7 +50,7 @@ const Home = () => {
 
   const fetchShopProducts = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/products");
+      const response = await fetch(`${API_URL}/api/products`);
       const data = await response.json();
       setShopProducts(data.slice(0, 3)); // Show only 3 products
     } catch (err) {

@@ -16,6 +16,7 @@ import Navbar from "../components/navbar";
 import { useAuth } from "../contexts/AuthContext";
 import { useCart } from "../contexts/CartContext";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../api/config";
 import "./BuildABouquet.css";
 
 const BuildABouquet = () => {
@@ -57,7 +58,7 @@ const BuildABouquet = () => {
     try {
       setLoading(true);
       console.log("Fetching from path:", path);
-      const response = await fetch(`http://localhost:5000/api/build-items/${path}`);
+      const response = await fetch(`${API_URL}/api/build-items/${path}`);
       console.log("Response status:", response.status);
       const data = await response.json();
       console.log("Data received:", data);

@@ -13,6 +13,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
+import { API_URL } from "../api/config";
 import "./AdminPanel.css";
 
 const AdminPanel = () => {
@@ -60,13 +61,13 @@ const AdminPanel = () => {
 
   const fetchAllData = async () => {
     try {
-      const productsRes = await fetch("http://localhost:5000/api/products");
+      const productsRes = await fetch(`${API_URL}/api/products`);
       const productsData = await productsRes.json();
 
-      const occasionRes = await fetch("http://localhost:5000/api/occasion-products");
+      const occasionRes = await fetch(`${API_URL}/api/occasion-products`);
       const occasionData = await occasionRes.json();
 
-      const buildRes = await fetch("http://localhost:5000/api/build-items");
+      const buildRes = await fetch(`${API_URL}/api/build-items`);
       const buildData = await buildRes.json();
 
       setProducts(productsData);
@@ -84,8 +85,8 @@ const AdminPanel = () => {
     e.preventDefault();
     
     const url = editingProduct 
-      ? `http://localhost:5000/api/products/${editingProduct._id}`
-      : "http://localhost:5000/api/products";
+      ? `${API_URL}/api/products/${editingProduct._id}`
+      : `${API_URL}/api/products`;
     
     const method = editingProduct ? "PUT" : "POST";
 
@@ -113,8 +114,8 @@ const AdminPanel = () => {
     e.preventDefault();
     
     const url = editingProduct 
-      ? `http://localhost:5000/api/occasion-products/${editingProduct._id}`
-      : "http://localhost:5000/api/occasion-products";
+      ? `${API_URL}/api/occasion-products/${editingProduct._id}`
+      : `${API_URL}/api/occasion-products`;
     
     const method = editingProduct ? "PUT" : "POST";
 
@@ -142,8 +143,8 @@ const AdminPanel = () => {
     e.preventDefault();
     
     const url = editingProduct 
-      ? `http://localhost:5000/api/build-items/${editingProduct._id}`
-      : "http://localhost:5000/api/build-items";
+      ? `${API_URL}/api/build-items/${editingProduct._id}`
+      : `${API_URL}/api/build-items`;
     
     const method = editingProduct ? "PUT" : "POST";
 
@@ -169,19 +170,19 @@ const AdminPanel = () => {
   // DELETE FUNCTIONS
   const deleteProduct = async (id) => {
     if (!window.confirm("Delete this product?")) return;
-    await fetch(`http://localhost:5000/api/products/${id}`, { method: "DELETE" });
+    await fetch(`${API_URL}/api/products/${id}`, { method: "DELETE" });
     setProducts(products.filter(p => p._id !== id));
   };
 
   const deleteOccasionProduct = async (id) => {
     if (!window.confirm("Delete this occasion product?")) return;
-    await fetch(`http://localhost:5000/api/occasion-products/${id}`, { method: "DELETE" });
+    await fetch(`${API_URL}/api/occasion-products/${id}`, { method: "DELETE" });
     setOccasionProducts(occasionProducts.filter(p => p._id !== id));
   };
 
   const deleteBuildItem = async (id) => {
     if (!window.confirm("Delete this item?")) return;
-    await fetch(`http://localhost:5000/api/build-items/${id}`, { method: "DELETE" });
+    await fetch(`${API_URL}/api/build-items/${id}`, { method: "DELETE" });
     setBuildItems(buildItems.filter(i => i._id !== id));
   };
 

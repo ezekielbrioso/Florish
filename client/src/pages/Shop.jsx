@@ -13,6 +13,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/navbar";
 import { useCart } from "../contexts/CartContext";
+import { API_URL } from "../api/config";
 import "./Shop.css";
 
 const Shop = () => {
@@ -27,7 +28,7 @@ const Shop = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/products");
+      const response = await fetch(`${API_URL}/api/products`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
