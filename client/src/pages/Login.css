@@ -1,14 +1,15 @@
 /* ===== Login Container ===== */
 .login-container {
   display: flex;
-  min-height: 100vh;
+  height: 90vh;
   background: #F9F7F2;
+  overflow: hidden;
 }
 
 /* ===== Left Side - Branding ===== */
 .login-left {
   flex: 1;
-  background: linear-gradient(135deg, #B2C6B6 0%, #9db09e 100%);
+  background: linear-gradient(135deg,#ffe5ec 0%,#fff1f5 50%,#ffffff 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,24 +42,32 @@
 
 .flower-icon {
   font-size: 5rem;
-  margin-bottom: 20px;
-  animation: float 3s ease-in-out infinite;
+  animation: spin 4s linear infinite;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+.flower-icon img {
+  width: 500px;
+  height: 150px;
+  object-fit: contain;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .login-decoration h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 4rem;
   margin-bottom: 15px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.login-decoration h1 img {
+  width: 450px;
+  height: auto;
+  object-fit: contain;
 }
 
 .tagline {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-style: italic;
   opacity: 0.95;
 }

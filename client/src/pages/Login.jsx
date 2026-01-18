@@ -42,9 +42,13 @@ const Login = () => {
     <div className="login-container">
       <div className="login-left">
         <div className="login-decoration">
-          <div className="flower-icon">🌸</div>
-          <h1>Florish</h1>
-          <p className="tagline">Where Every Petal Tells a Story</p>
+          <div className="flower-icon">
+            <img src="images/icons/florish-icon.png" alt="Florish Logo" />
+          </div>
+          <h1>
+            <img src="/images/logo/florish-logo.png" alt="Florish" />
+          </h1>
+          <p className="tagline">Whispering the language of love through petals</p>
         </div>
       </div>
 
