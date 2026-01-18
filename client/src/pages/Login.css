@@ -1,0 +1,273 @@
+/* ===== Login Container ===== */
+.login-container {
+  display: flex;
+  min-height: 100vh;
+  background: #F9F7F2;
+}
+
+/* ===== Left Side - Branding ===== */
+.login-left {
+  flex: 1;
+  background: linear-gradient(135deg, #B2C6B6 0%, #9db09e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-left::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: pulse 15s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(1.1); opacity: 0.5; }
+}
+
+.login-decoration {
+  text-align: center;
+  z-index: 1;
+  color: #fff;
+}
+
+.flower-icon {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.login-decoration h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.tagline {
+  font-size: 1.3rem;
+  font-style: italic;
+  opacity: 0.95;
+}
+
+/* ===== Right Side - Login Form ===== */
+.login-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  background: #F9F7F2;
+}
+
+.login-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 50px;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Login Header ===== */
+.login-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.login-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: #4A4A4A;
+  margin-bottom: 10px;
+}
+
+.login-header p {
+  font-size: 1rem;
+  color: #888;
+}
+
+/* ===== Google Sign In Button ===== */
+.google-signin-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 16px 24px;
+  background: #fff;
+  border: 2px solid #E0B0B6;
+  border-radius: 12px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4A4A4A;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(224, 176, 182, 0.1);
+}
+
+.google-signin-btn:hover {
+  background: #E0B0B6;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(224, 176, 182, 0.3);
+}
+
+.google-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.google-signin-btn:hover .google-icon {
+  transform: rotate(360deg);
+}
+
+/* ===== Divider ===== */
+.login-divider {
+  text-align: center;
+  margin: 30px 0;
+  position: relative;
+}
+
+.login-divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #E0E0E0;
+}
+
+.login-divider span {
+  background: #fff;
+  padding: 0 15px;
+  font-size: 0.85rem;
+  color: #888;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Features List ===== */
+.login-features {
+  margin-top: 30px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  color: #4A4A4A;
+  font-size: 0.95rem;
+}
+
+.feature-icon {
+  width: 24px;
+  height: 24px;
+  background: #B2C6B6;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+/* ===== Login Footer ===== */
+.login-footer {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.login-footer p {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.back-home {
+  display: inline-block;
+  color: #B2C6B6;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.back-home:hover {
+  color: #E0B0B6;
+  transform: translateX(-5px);
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 968px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .login-left {
+    padding: 40px;
+    min-height: 300px;
+  }
+
+  .login-decoration h1 {
+    font-size: 3rem;
+  }
+
+  .flower-icon {
+    font-size: 3.5rem;
+  }
+
+  .tagline {
+    font-size: 1.1rem;
+  }
+
+  .login-right {
+    padding: 40px 20px;
+  }
+
+  .login-card {
+    padding: 35px 25px;
+  }
+
+  .login-header h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-left {
+    min-height: 250px;
+    padding: 30px;
+  }
+
+  .login-decoration h1 {
+    font-size: 2.5rem;
+  }
+
+  .login-card {
+    padding: 30px 20px;
+  }
+
+  .google-signin-btn {
+    padding: 14px 20px;
+    font-size: 0.95rem;
+  }
+}

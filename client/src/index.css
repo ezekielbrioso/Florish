@@ -1,0 +1,549 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@400;700&display=swap');
+
+/* ===== General ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  color: #4A4A4A;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #B2C6B6;
+  cursor: pointer;
+}
+
+.nav-links a,
+.logout-btn {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #4A4A4A;
+  border: none;
+  background: none;
+  font-size: 1rem;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 90px 150px;
+  background: #F9F7F2;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  color: #4A4A4A;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  max-width: 690px;
+  font-family: 'Playfair Display', serif;
+
+}
+
+.hero-content h1 .highlight {
+  display: block;
+  color: #E0B0B6;
+  font-family: 'Playfair Display', serif;
+
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #888888;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+.hero-image img {
+  width: 430px;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 50% 50% 0 0;
+  border: 8px solid #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.primary-btn {
+  padding: 12px 32px;
+  background: #E0B0B6;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+  background: #D4989E;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.secondary-btn {
+  padding: 14px 36px;
+  background: transparent;
+  color: #B2C6B6;
+  border: 2px solid #B2C6B6;
+  border-radius: 25px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background: #B2C6B6;
+  color: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+/* ===== Collections ===== */
+.collections {
+  padding: 60px 90px;
+  text-align: center;
+  background: #F9F7F2;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.collections h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #4A4A4A;
+  margin-bottom: 10px;
+}
+
+.collections-subtitle {
+  font-size: 1.1rem;
+  color: #4A4A4A;
+  margin-bottom: 40px;
+}
+
+.collection-grid {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.collection-card {
+  width: 380px;
+  padding: 15px 25px;
+  text-align: center;
+  background: #FFFFFF;
+  object-fit: cover;
+  border-radius: 43% 43% 0 0;
+  border: 8px solid #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.collection-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.collection-card img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  border-radius: 50% 50% 0 0;
+  border: 8px solid #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.collection-card h3 {
+  margin-bottom: 12px;
+  color: #B2C6B6;
+  font-size: 1.7rem;
+}
+
+.collection-card p {
+  color: #888888;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  color: #E0B0B6;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.collections-button {
+  margin-top: 20px;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.1rem;
+  color: #4A4A4A;
+}
+
+/* ===== Features ===== */
+.features {
+  background: #F9F7F2;
+  padding: 60px 80px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.features h2 {
+  font-size: 2rem;
+  color: #B2C6B6;
+  margin-bottom: 40px;
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.feature-card {
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 20px;
+  background: #F9F7F2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+/* ===== CTA ===== */
+.cta {
+  background: #B2C6B6;
+  color: #FFFFFF;
+  padding: 60px 80px;
+  text-align: center;
+  border-radius: 16px;
+  margin: 40px 80px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 160px);
+  box-sizing: border-box;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.cta p {
+  font-size: 1.1rem;
+  color: #FFFFFF;
+  margin-bottom: 25px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: #F9F7F2;
+  text-align: center;
+  padding: 40px 80px;
+  color: #4A4A4A;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ===== Occasions Preview Section ===== */
+.occasions-preview {
+  padding: 80px;
+    background: linear-gradient(
+    135deg,
+    #ffe5ec 0%,
+    #fff1f5 50%,
+    #ffffff 100%
+  );
+
+
+
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.occasions-header-section {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.occasions-header-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #4A4A4A;
+  margin-bottom: 15px;
+}
+
+.occasions-header-section p {
+  font-size: 1.1rem;
+  color: #4A4A4A;
+  margin-bottom: 25px;
+}
+
+.occasions-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.occasion-preview-card {
+  background: #F9F7F2;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.occasion-preview-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.occasion-image {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+
+.occasion-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.occasion-preview-card:hover .occasion-image img {
+  transform: scale(1.05);
+}
+
+.occasion-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #E0B0B6;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.occasion-badge-inline {
+  display: inline-block;
+  background: #E0B0B6;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.occasion-info {
+  padding: 25px;
+}
+
+.occasion-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: #4A4A4A;
+  margin-bottom: 10px;
+}
+
+.occasion-info p {
+  font-size: 1rem;
+  color: #888888;
+  margin-bottom: 15px;
+  min-height: 45px;
+}
+
+.occasion-price {
+  font-size: 1.4rem;
+  color: #E0B0B6;
+  font-weight: 700;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 60px 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .collections {
+    padding: 60px 40px;
+  }
+
+  .collection-grid {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Hide hero image on mobile */
+  .hero-image {
+    display: none;
+  }
+
+  .hero {
+    padding: 40px 20px;
+    justify-content: center;
+  }
+
+  .hero-content {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Hide collection card images on mobile */
+  .collection-card img,
+  .collection-image {
+    display: none;
+  }
+
+  .collection-card {
+    border-radius: 16px;
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .collections {
+    padding: 40px 20px;
+  }
+
+  .collections h2 {
+    font-size: 2rem;
+  }
+
+  .collection-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .occasions-preview {
+    padding: 40px 20px;
+  }
+
+  .occasions-header-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .occasions-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta {
+    margin: 40px 20px;
+    padding: 40px 20px;
+    width: calc(100% - 40px);
+  }
+
+  .cta h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+
+  .collections h2 {
+    font-size: 1.6rem;
+  }
+
+  .collection-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .occasions-header-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
