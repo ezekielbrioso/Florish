@@ -46,8 +46,9 @@
 }
 
 .flower-icon img {
-  width: 500px;
-  height: 150px;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
   object-fit: contain;
 }
 
@@ -61,7 +62,8 @@
 }
 
 .login-decoration h1 img {
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   height: auto;
   object-fit: contain;
 }
@@ -226,30 +228,106 @@
 }
 
 /* ===== Mobile Responsive ===== */
-@media (max-width: 968px) {
-  .login-container {
-    flex-direction: column;
-  }
-
+@media (max-width: 1024px) {
   .login-left {
-    padding: 40px;
-    min-height: 300px;
+    padding: 50px 40px;
   }
 
-  .login-decoration h1 {
-    font-size: 3rem;
+  .flower-icon img {
+    max-width: 400px;
   }
 
-  .flower-icon {
-    font-size: 3.5rem;
-  }
-
-  .tagline {
-    font-size: 1.1rem;
+  .login-decoration h1 img {
+    max-width: 350px;
   }
 
   .login-right {
+    padding: 50px 30px;
+  }
+}
+
+@media (max-width: 968px) {
+  .login-container {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .login-left {
+    padding: 50px 30px;
+    min-height: auto;
+    flex: none;
+  }
+
+  .login-left::before {
+    display: none;
+  }
+
+  .flower-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+  .flower-icon img {
+    max-width: 200px;
+  }
+
+  .login-decoration h1 {
+    margin-bottom: 10px;
+  }
+
+  .login-decoration h1 img {
+    max-width: 250px;
+  }
+
+  .tagline {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  .login-right {
+    padding: 30px 20px 50px;
+    flex: none;
+  }
+
+  .login-card {
+    padding: 40px 30px;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .login-header {
+    margin-bottom: 30px;
+  }
+
+  .login-header h2 {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-left {
     padding: 40px 20px;
+  }
+
+  .flower-icon {
+    font-size: 2.5rem;
+  }
+
+  .flower-icon img {
+    max-width: 160px;
+  }
+
+  .login-decoration h1 img {
+    max-width: 220px;
+  }
+
+  .tagline {
+    font-size: 0.95rem;
+  }
+
+  .login-right {
+    padding: 25px 20px 40px;
   }
 
   .login-card {
@@ -257,26 +335,154 @@
   }
 
   .login-header h2 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
+  }
+
+  .login-header p {
+    font-size: 0.95rem;
+  }
+
+  .google-signin-btn {
+    padding: 15px 20px;
+    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 480px) {
-  .login-left {
-    min-height: 250px;
-    padding: 30px;
+  .login-container {
+    height: auto;
   }
 
-  .login-decoration h1 {
-    font-size: 2.5rem;
+  .login-left {
+    padding: 35px 20px;
+  }
+
+  .flower-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .flower-icon img {
+    max-width: 140px;
+  }
+
+  .login-decoration h1 img {
+    max-width: 200px;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+  }
+
+  .login-right {
+    padding: 20px 15px 35px;
   }
 
   .login-card {
     padding: 30px 20px;
+    border-radius: 20px;
+  }
+
+  .login-header {
+    margin-bottom: 25px;
+  }
+
+  .login-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .login-header p {
+    font-size: 0.9rem;
   }
 
   .google-signin-btn {
-    padding: 14px 20px;
-    font-size: 0.95rem;
+    padding: 14px 18px;
+    font-size: 0.9rem;
+    gap: 12px;
+  }
+
+  .google-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .login-divider {
+    margin: 25px 0;
+  }
+
+  .login-features {
+    margin-top: 25px;
+  }
+
+  .feature-item {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+
+  .feature-icon {
+    width: 22px;
+    height: 22px;
+    font-size: 0.75rem;
+  }
+
+  .login-footer {
+    margin-top: 25px;
+  }
+
+  .login-footer p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .login-left {
+    padding: 30px 15px;
+  }
+
+  .flower-icon img {
+    max-width: 120px;
+  }
+
+  .login-decoration h1 img {
+    max-width: 180px;
+  }
+
+  .tagline {
+    font-size: 0.85rem;
+  }
+
+  .login-right {
+    padding: 20px 15px 30px;
+  }
+
+  .login-card {
+    padding: 25px 18px;
+  }
+
+  .login-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+
+  .login-header p {
+    font-size: 0.85rem;
+  }
+
+  .google-signin-btn {
+    padding: 13px 16px;
+    font-size: 0.85rem;
+  }
+
+  .google-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .feature-item {
+    font-size: 0.85rem;
+  }
+
+  .login-footer p {
+    font-size: 0.8rem;
   }
 }

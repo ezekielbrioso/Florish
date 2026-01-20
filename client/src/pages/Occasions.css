@@ -184,7 +184,7 @@
 /* ===== Mobile Responsive ===== */
 @media (max-width: 768px) {
   .occasions-header {
-    padding: 40px;
+    padding: 40px 20px;
   }
 
   .occasions-header h1 {
@@ -192,7 +192,7 @@
   }
 
   .occasion-categories {
-    padding: 40px;
+    padding: 40px 20px;
     gap: 15px;
   }
 
@@ -201,16 +201,66 @@
     padding: 15px;
   }
 
+  .occasion-category-card h3 {
+    font-size: 0.75rem;
+  }
+
   .occasion-icon {
     font-size: 2rem;
   }
 
   .occasions-section {
-    padding: 40px;
+    padding: 40px 20px;
   }
 
   .products-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .occasions-header {
+    padding: 30px 15px;
+  }
+
+  .occasions-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .occasions-header p {
+    font-size: 1rem;
+  }
+
+  .occasion-categories {
+    padding: 30px 15px;
+    gap: 10px;
+  }
+
+  .occasion-category-card {
+    width: 100px;
+    padding: 12px;
+  }
+
+  .occasion-category-card h3 {
+    font-size: 0.6rem;
+  }
+
+  .occasion-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .occasions-section {
+    padding: 30px 15px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .occasions-products {
+    padding: 30px 15px;
   }
 }

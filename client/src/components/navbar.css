@@ -325,7 +325,9 @@
 /* ===== Mobile Responsive ===== */
 @media (max-width: 768px) {
   .navbar {
-    padding: 15px 30px;
+    padding: 15px 20px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .brand-logo {
@@ -367,6 +369,8 @@
     background: #fff;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .mobile-menu a {
@@ -388,6 +392,29 @@
     background: #F9F7F2;
     padding-left: 15px;
     border-left: 4px solid #B2C6B6;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px 15px;
+  }
+
+  .brand-logo {
+    height: 40px;
+  }
+
+  .logo-text {
+    font-size: 1.4rem;
+  }
+
+  .cart-icon-img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .navbar-actions {
+    gap: 12px;
   }
 }
 
