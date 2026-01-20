@@ -69,9 +69,9 @@ const Home = () => {
             <button className="primary-btn" onClick={() => navigate("/build")}>
               Build Your Bouquet
             </button>
-            <a href="/shop" style={{ textDecoration: 'none' }}>
-              <button className="secondary-btn">Shop Collections</button>
-            </a>
+            <button className="secondary-btn" onClick={() => navigate("/shop")}>
+              Shop Collections
+            </button>
           </div>
         </div>
         <div className="hero-image">
@@ -100,9 +100,9 @@ const Home = () => {
         )}
         
         <div className="collections-button">
-          <a href="/shop" style={{ textDecoration: 'none' }}>
-            <button className="primary-btn">Shop Collections</button>
-          </a>
+          <button className="primary-btn" onClick={() => navigate("/shop")}>
+            Shop Collections
+          </button>
         </div>
       </section>
 
@@ -111,9 +111,9 @@ const Home = () => {
         <div className="occasions-header-section">
           <h2>Celebrate Every Occasion</h2>
           <p>Beautifully curated bouquets for life's special moments</p>
-          <a href="/occasions" style={{ textDecoration: 'none' }}>
-            <button className="secondary-btn">View All Occasions</button>
-          </a>
+          <button className="secondary-btn" onClick={() => navigate("/occasions")}>
+            View All Occasions
+          </button>
         </div>
 
         {loading ? (
